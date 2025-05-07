@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain.document_loaders import SitemapLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter 
-from langchain.vectorstores.faiss import FAISS
+from langchain.vectorstores import FAISS
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.schema.runnable import RunnablePassthrough, RunnableLambda
 from langchain.chat_models import ChatOpenAI
