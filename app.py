@@ -201,7 +201,7 @@ with st.sidebar:
     url = st.text_input("Write down a URL", 
                         placeholder="https://example.com")
     
-    st.link_button("Go to Github Repo", "https://github.com/hihighhye/Fullstack_GPT")
+    st.link_button("Go to Github Repo", "https://github.com/hihighhye/SiteGPT")
 
 # test_url = "https://developers.cloudflare.com/sitemap-0.xml"
 
