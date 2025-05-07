@@ -239,3 +239,8 @@ xlrd==2.0.1
 XlsxWriter==3.1.5
 yarl==1.9.2
 zipp==3.16.2
+langchain-community==0.3.23
+langchain-core==0.3.58
+langchain-openai==0.3.16
+langchain-text-splitters==0.3.8
+langchain-writer==0.2.1

@@ -1,5 +1,4 @@
 import streamlit as st
-from langchain_core.documents import Document
 from langchain_community.document_loaders import SitemapLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter 
 from langchain_community.vectorstores import FAISS
