@@ -9,6 +9,7 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.callbacks.base import BaseCallbackHandler
 import re
+import os
 
 
 check_prompt = ChatPromptTemplate.from_template(
@@ -196,7 +197,7 @@ with st.sidebar:
         user_openai_api_key = st.text_input("Enter your OpenAI API key.")
         submitted = st.form_submit_button("Set")
         if submitted:
-            st.write(f"Your API Key: {user_openai_api_key}")
+            os.environ['OPENAI_API_KEY'] = user_openai_api_key
 
     url = st.text_input("Write down a URL", 
                         placeholder="https://example.com")
