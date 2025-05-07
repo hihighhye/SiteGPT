@@ -180,8 +180,18 @@ def load_website(url):
         parsing_function=parse_page
     )
     loader.requests_per_second = 5
-    docs = loader.load_and_split(text_splitter=splitter)
-    vector_store = FAISS.from_documents(docs, OpenAIEmbeddings())
+
+    batch_size = 100
+    docs = loader.load()
+    vector_store = FAISS(OpenAIEmbeddings())
+    for i in range(0, len(docs), batch_size):
+        mini_docs = docs[i:]
+        if (i+batch_size) < len(docs):
+            mini_docs = docs[i:i+batch_size]
+
+        split_docs = splitter.split_documents(mini_docs)
+        vector_store.add_documents(split_docs)
+        
     return vector_store.as_retriever()
 
 
