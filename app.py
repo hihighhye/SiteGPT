@@ -95,7 +95,7 @@ choose_prompt = ChatPromptTemplate.from_messages(
             Use the answers that have the highest score (more helpful).
             Favor the latest documents.
 
-            Cite sources. Do not modify the source, keep it as a link.
+            Don't forget to cite sources. Do not modify the source, keep it as a link.
 
             Answers: {answers}
             """
